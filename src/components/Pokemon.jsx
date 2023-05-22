@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const POKEMOS_NAMES = [
   "bulvasaur",
   "ivysaur",
@@ -71,6 +72,9 @@ export const Pokemon = () => {
   return (
     <>
       <section>
+        <Link to="/">memory</Link>
+        <Link to="/pokemon">pokemon</Link>
+        <Link to="/wordsforminutes">WPM</Link>
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
             indexPokemon + 1

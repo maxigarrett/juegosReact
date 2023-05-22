@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const WORDS = [
   "electroencefalografo",
   "arteriosclerosis",
@@ -77,6 +78,9 @@ export const WordsForMinutes = () => {
 
   return (
     <main>
+      <Link to="/">memory</Link>
+      <Link to="/pokemon">pokemon</Link>
+      <Link to="/wordsforminutes">WPM</Link>
       <h1>{word}</h1>
       <span>Time: {time}</span>
       <h2>letters quantity: {lettersCount}</h2>

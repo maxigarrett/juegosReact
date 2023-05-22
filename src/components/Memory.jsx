@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./Memory.module.css";
+import { Link } from "react-router-dom";
 const IMAGES = [
   "https://icongr.am/devicon/angularjs-original.svg?size=128&color=currentColor",
   "https://icongr.am/devicon/c-original.svg?size=128&color=currentColor",
@@ -61,6 +62,9 @@ export const Memory = () => {
 
   return (
     <div>
+      <Link to="/">memory</Link>
+      <Link to="/pokemon">pokemon</Link>
+      <Link to="/wordsforminutes">WPM</Link>
       <h2>Memory</h2>
       {/* <Memory /> */}
       <ul className={style.ul}>
