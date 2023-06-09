@@ -8,9 +8,9 @@ import { WordsForMinutes } from "./components/WordsForMinutes";
 function App() {
   return (
     <Routes>
-      <Route element={<Memory />} path="/" />
-      <Route element={<WordsForMinutes />} path="/wordsforminutes" />
-      <Route element={<Pokemon />} path="/pokemon" />
+      <Route element={<Memory />} path="juegosReact/" />
+      <Route element={<WordsForMinutes />} path="juegosReact/wordsforminutes" />
+      <Route element={<Pokemon />} path="juegosReact/pokemon" />
     </Routes>
   );
 }
