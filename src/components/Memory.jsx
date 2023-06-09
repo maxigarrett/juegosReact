@@ -63,13 +63,13 @@ export const Memory = () => {
   return (
     <div>
       <div className={style.linksRoutes}>
-        <Link className={style.link} to="juegosReact/">
+        <Link className={style.link} to="/">
           Memory
         </Link>
-        <Link className={style.link} to="juegosReact/pokemon">
+        <Link className={style.link} to="/pokemon">
           Pokemon
         </Link>
-        <Link className={style.link} to="juegosReact/wordsforminutes">
+        <Link className={style.link} to="/wordsforminutes">
           Wpm
         </Link>
       </div>
