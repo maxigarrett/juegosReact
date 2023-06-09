@@ -74,13 +74,13 @@ export const Pokemon = () => {
     <>
       <section>
         <div className={style.linksRoutes}>
-          <Link className={style.link} to="/">
+          <Link className={style.link} to="juegosReact/">
             Memory
           </Link>
-          <Link className={style.link} to="/pokemon">
+          <Link className={style.link} to="juegosReact/pokemon">
             Pokemon
           </Link>
-          <Link className={style.link} to="/wordsforminutes">
+          <Link className={style.link} to="juegosReact/wordsforminutes">
             Wpm
           </Link>
         </div>
