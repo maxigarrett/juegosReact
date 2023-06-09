@@ -62,9 +62,17 @@ export const Memory = () => {
 
   return (
     <div>
-      <Link to="/">memory</Link>
-      <Link to="/pokemon">pokemon</Link>
-      <Link to="/wordsforminutes">WPM</Link>
+      <div className={style.linksRoutes}>
+        <Link className={style.link} to="/">
+          Memory
+        </Link>
+        <Link className={style.link} to="/pokemon">
+          Pokemon
+        </Link>
+        <Link className={style.link} to="/wordsforminutes">
+          Wpm
+        </Link>
+      </div>
       <h2>Memory</h2>
       {/* <Memory /> */}
       <ul className={style.ul}>

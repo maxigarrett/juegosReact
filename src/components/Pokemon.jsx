@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import style from "./Pokemon.module.css";
 const POKEMOS_NAMES = [
   "bulvasaur",
   "ivysaur",
@@ -72,9 +73,17 @@ export const Pokemon = () => {
   return (
     <>
       <section>
-        <Link to="/">memory</Link>
-        <Link to="/pokemon">pokemon</Link>
-        <Link to="/wordsforminutes">WPM</Link>
+        <div className={style.linksRoutes}>
+          <Link className={style.link} to="/">
+            Memory
+          </Link>
+          <Link className={style.link} to="/pokemon">
+            Pokemon
+          </Link>
+          <Link className={style.link} to="/wordsforminutes">
+            Wpm
+          </Link>
+        </div>
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
             indexPokemon + 1
@@ -86,16 +95,23 @@ export const Pokemon = () => {
           }}
         />
         {!startGame ? (
-          <button onClick={playGame}>jugar</button>
+          <div className={style.containerButtonPlay}>
+            <button className={style.buttonPlay} onClick={playGame}>
+              jugar
+            </button>
+          </div>
         ) : (
           <form onSubmit={hadelSearchPokemons}>
             <input
+              className={style.inputPokemon}
               type="text"
               name="search"
               onChange={hadelSearchPokemons}
               value={pokemonGuess.search}
             />
-            <button type="submit">Adivinar</button>
+            <button className={style.buttonPlay} type="submit">
+              Adivinar
+            </button>
           </form>
         )}
       </section>

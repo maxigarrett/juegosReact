@@ -17,3 +17,17 @@
 .is-selected {
   display: block;
 }
+.linksRoutes {
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: red; */
+  font-size: 1.5rem;
+}
+.link:hover {
+  border-bottom: 2px solid #646cff;
+}

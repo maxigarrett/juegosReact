@@ -1,0 +1,40 @@
+h1,
+h2,
+span {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.linksRoutes {
+  /* width: 100%; */
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: red; */
+  font-size: 1.5rem;
+}
+.link:hover {
+  border-bottom: 2px solid #646cff;
+}
+.buttonStart {
+  padding: 10px;
+  width: 100px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border: 1px solid blue;
+  color: blue;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.buttonStart:hover {
+  background-color: blue;
+  color: white;
+}
+.input {
+  margin-right: 5px;
+  padding: 10px;
+  width: 162px;
+}

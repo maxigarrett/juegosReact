@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import style from "./WordsForMinutes.module.css";
 import { Link } from "react-router-dom";
 const WORDS = [
   "electroencefalografo",
@@ -37,6 +38,7 @@ export const WordsForMinutes = () => {
   const [lettersCount, setLettersCounts] = useState(0);
   const [buffer, setBuffer] = useState(initialBuffer);
   const [time, setTime] = useState(0);
+  const [guess, setGuess] = useState("");
 
   //PARA USARLO CON EL INPUT DE ENVIAR
   const handelSubmit = (event) => {
@@ -56,15 +58,19 @@ export const WordsForMinutes = () => {
     setBuffer({ ...buffer, [name]: value });
     console.log(name, value);
     if (word === value) {
+      setGuess("✔");
       setWord(WORDS[(Math.random() * WORDS.length) | 0]);
       setLettersCounts((prevLetter) => prevLetter + value.length);
       setBuffer(initialBuffer);
+    } else {
+      setGuess("✖");
     }
   };
 
   //we start game for just 60 seconds
   const startGame = () => {
     setTime(60);
+    setLettersCounts(0);
   };
 
   //we start to decrement the 60 sec to 0 sec fot finished the game
@@ -78,24 +84,39 @@ export const WordsForMinutes = () => {
 
   return (
     <main>
-      <Link to="/">memory</Link>
-      <Link to="/pokemon">pokemon</Link>
-      <Link to="/wordsforminutes">WPM</Link>
+      <div className={style.linksRoutes}>
+        <Link className={style.link} to="/">
+          Memory
+        </Link>
+        <Link className={style.link} to="/pokemon">
+          Pokemon
+        </Link>
+        <Link className={style.link} to="/wordsforminutes">
+          Wpm
+        </Link>
+      </div>
+
       <h1>{word}</h1>
       <span>Time: {time}</span>
       <h2>letters quantity: {lettersCount}</h2>
       {time === 0 ? (
-        <button onClick={startGame}>start</button>
+        <button className={style.buttonStart} onClick={startGame}>
+          start
+        </button>
       ) : (
         <form onSubmit={handelSubmit}>
           <input
+            className={style.input}
             type="text"
             name="buffer"
             onChange={handelSerch}
             value={buffer.buffer}
             // onChange={(e) => setBuffer(e.target.value)}
           />
-          <button type="submit">comprobar</button>
+          <button className={style.buttonStart} type="submit">
+            comprobar
+          </button>
+          {guess}
         </form>
       )}
     </main>
